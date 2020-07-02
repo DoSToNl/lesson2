@@ -3,19 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="images/css/styles.css">
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	
-	<title>Lesson 2</title>
+	<title>Multiplication Table</title>
 </head>
 <body>
-	<div class="wrapper">
-		<div id="app">
-			
-		</div>
-	</div>	
-
-	
-	<script src="images/js/main.js"></script>
+	<div class="wrapper" id="app">
+		<input type="text" v-model="number">
+		<p v-for="(count, i) in 10">{{number}} * {{i}} = {{number*i}}</p>
+	</div>
+	<script>
+		var app = new Vue({
+			el: "#app",
+			data: {
+				number: 0
+			}
+		})
+	</script>
 </body>
 </html>
